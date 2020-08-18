@@ -1,20 +1,16 @@
-# aula
 novo_jogo = "s"
 
 while novo_jogo == "s"
-	pusts "Advinhe o número que estou pensando entre 1 e 100:"
+	puts "Advinhe o número que estou pensando entre 1 e 100:"
 	seu_numero = gets.to_i
 
-	pc_numero = Random.rand(99) + 1
+	pc_numero = Random.rand(10) + 1
 
 	tentativas = 1
 
 	while pc_numero != seu_numero
-		if pc_numero > seu_numero
-			puts "O número é maior que #{seu_numero}"
-		else
-			puts "O número é menor que #{seu_numero}"
-		end
+		puts "O número é maior que #{seu_numero}" if pc_numero > seu_numero
+		puts "O número é menor que #{seu_numero}" if pc_numero < seu_numero
 
 		tentativas += 1
 
